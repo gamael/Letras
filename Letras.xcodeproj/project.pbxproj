@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		609F2D77262BC55E00B5792C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D76262BC55E00B5792C /* AppDelegate.swift */; };
 		609F2D79262BC55E00B5792C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D78262BC55E00B5792C /* SceneDelegate.swift */; };
-		609F2D7B262BC55E00B5792C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D7A262BC55E00B5792C /* FirstViewController.swift */; };
-		609F2D7D262BC55E00B5792C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D7C262BC55E00B5792C /* SecondViewController.swift */; };
+		609F2D7B262BC55E00B5792C /* BusquedaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D7A262BC55E00B5792C /* BusquedaVC.swift */; };
+		609F2D7D262BC55E00B5792C /* HistorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D7C262BC55E00B5792C /* HistorialVC.swift */; };
 		609F2D80262BC55E00B5792C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609F2D7E262BC55E00B5792C /* Main.storyboard */; };
 		609F2D82262BC56400B5792C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 609F2D81262BC56400B5792C /* Assets.xcassets */; };
 		609F2D85262BC56400B5792C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609F2D83262BC56400B5792C /* LaunchScreen.storyboard */; };
+		609F2D8D262BD24800B5792C /* LetrasInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D8C262BD24800B5792C /* LetrasInteractor.swift */; };
+		609F2D8F262BD29300B5792C /* Entidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D8E262BD29300B5792C /* Entidades.swift */; };
+		609F2D91262BD30500B5792C /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D90262BD30500B5792C /* Extensiones.swift */; };
+		609F2D93262BD4A500B5792C /* LetraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D92262BD4A500B5792C /* LetraVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		609F2D73262BC55E00B5792C /* Letras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Letras.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609F2D76262BC55E00B5792C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		609F2D78262BC55E00B5792C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		609F2D7A262BC55E00B5792C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		609F2D7C262BC55E00B5792C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		609F2D7A262BC55E00B5792C /* BusquedaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusquedaVC.swift; sourceTree = "<group>"; };
+		609F2D7C262BC55E00B5792C /* HistorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialVC.swift; sourceTree = "<group>"; };
 		609F2D7F262BC55E00B5792C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		609F2D81262BC56400B5792C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		609F2D84262BC56400B5792C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		609F2D86262BC56400B5792C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		609F2D8C262BD24800B5792C /* LetrasInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetrasInteractor.swift; sourceTree = "<group>"; };
+		609F2D8E262BD29300B5792C /* Entidades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entidades.swift; sourceTree = "<group>"; };
+		609F2D90262BD30500B5792C /* Extensiones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
+		609F2D92262BD4A500B5792C /* LetraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +68,16 @@
 			children = (
 				609F2D76262BC55E00B5792C /* AppDelegate.swift */,
 				609F2D78262BC55E00B5792C /* SceneDelegate.swift */,
-				609F2D7A262BC55E00B5792C /* FirstViewController.swift */,
-				609F2D7C262BC55E00B5792C /* SecondViewController.swift */,
+				609F2D7A262BC55E00B5792C /* BusquedaVC.swift */,
+				609F2D7C262BC55E00B5792C /* HistorialVC.swift */,
 				609F2D7E262BC55E00B5792C /* Main.storyboard */,
 				609F2D81262BC56400B5792C /* Assets.xcassets */,
 				609F2D83262BC56400B5792C /* LaunchScreen.storyboard */,
 				609F2D86262BC56400B5792C /* Info.plist */,
+				609F2D8C262BD24800B5792C /* LetrasInteractor.swift */,
+				609F2D8E262BD29300B5792C /* Entidades.swift */,
+				609F2D90262BD30500B5792C /* Extensiones.swift */,
+				609F2D92262BD4A500B5792C /* LetraVC.swift */,
 			);
 			path = Letras;
 			sourceTree = "<group>";
@@ -141,10 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				609F2D7D262BC55E00B5792C /* SecondViewController.swift in Sources */,
-				609F2D7B262BC55E00B5792C /* FirstViewController.swift in Sources */,
+				609F2D7D262BC55E00B5792C /* HistorialVC.swift in Sources */,
+				609F2D93262BD4A500B5792C /* LetraVC.swift in Sources */,
+				609F2D7B262BC55E00B5792C /* BusquedaVC.swift in Sources */,
 				609F2D77262BC55E00B5792C /* AppDelegate.swift in Sources */,
+				609F2D8F262BD29300B5792C /* Entidades.swift in Sources */,
 				609F2D79262BC55E00B5792C /* SceneDelegate.swift in Sources */,
+				609F2D91262BD30500B5792C /* Extensiones.swift in Sources */,
+				609F2D8D262BD24800B5792C /* LetrasInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
