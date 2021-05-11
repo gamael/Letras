@@ -20,6 +20,9 @@
 		609F2D93262BD4A500B5792C /* LetraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D92262BD4A500B5792C /* LetraVC.swift */; };
 		60DF76D32649125B0088AAF8 /* ManejoRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF76D22649125B0088AAF8 /* ManejoRed.swift */; };
 		60DF76D6264914C30088AAF8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF76D5264914C30088AAF8 /* Reachability.swift */; };
+		60DF76D9264A3A450088AAF8 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF76D8264A3A450088AAF8 /* Request.swift */; };
+		60DF76DD264A3E3C0088AAF8 /* LyricsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF76DC264A3E3C0088AAF8 /* LyricsRequest.swift */; };
+		60DF76E0264A4F4A0088AAF8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF76DF264A4F490088AAF8 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		609F2D92262BD4A500B5792C /* LetraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetraVC.swift; sourceTree = "<group>"; };
 		60DF76D22649125B0088AAF8 /* ManejoRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManejoRed.swift; sourceTree = "<group>"; };
 		60DF76D5264914C30088AAF8 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		60DF76D8264A3A450088AAF8 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		60DF76DC264A3E3C0088AAF8 /* LyricsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsRequest.swift; sourceTree = "<group>"; };
+		60DF76DF264A4F490088AAF8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,9 @@
 				609F2D92262BD4A500B5792C /* LetraVC.swift */,
 				60DF76D22649125B0088AAF8 /* ManejoRed.swift */,
 				60DF76D5264914C30088AAF8 /* Reachability.swift */,
+				60DF76D8264A3A450088AAF8 /* Request.swift */,
+				60DF76DC264A3E3C0088AAF8 /* LyricsRequest.swift */,
+				60DF76DF264A4F490088AAF8 /* NetworkManager.swift */,
 			);
 			path = Letras;
 			sourceTree = "<group>";
@@ -161,8 +170,11 @@
 			files = (
 				609F2D7D262BC55E00B5792C /* HistorialVC.swift in Sources */,
 				60DF76D32649125B0088AAF8 /* ManejoRed.swift in Sources */,
+				60DF76D9264A3A450088AAF8 /* Request.swift in Sources */,
+				60DF76E0264A4F4A0088AAF8 /* NetworkManager.swift in Sources */,
 				609F2D93262BD4A500B5792C /* LetraVC.swift in Sources */,
 				609F2D7B262BC55E00B5792C /* BusquedaVC.swift in Sources */,
+				60DF76DD264A3E3C0088AAF8 /* LyricsRequest.swift in Sources */,
 				609F2D77262BC55E00B5792C /* AppDelegate.swift in Sources */,
 				609F2D8F262BD29300B5792C /* Entidades.swift in Sources */,
 				609F2D79262BC55E00B5792C /* SceneDelegate.swift in Sources */,
