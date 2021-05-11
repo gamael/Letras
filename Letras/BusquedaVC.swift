@@ -11,9 +11,9 @@ import UIKit
 class BusquedaVC: UIViewController {
     
     enum CasosError: String {
-        case camposInvalidos
-        case sinResultados
-        case sinInternet
+        case camposInvalidos = "Los campos están vacios"
+        case sinResultados = "No se encontraron resultados"
+        case sinInternet = "No hay conexión a internet"
         case ninguno
     }
     
@@ -24,6 +24,7 @@ class BusquedaVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor = LetrasInteractorImpl()
     }
 
     @IBAction func buscarCanción() {
@@ -61,11 +62,15 @@ class BusquedaVC: UIViewController {
         interactor.buscarLetra(de: artista, llamada: cancion) { [weak self] (resultado) in
             switch resultado {
             case .exito(let canción):
-                break
+                self?.handleResultadoDe(canción: canción)
             case .fallo:
                 self?.updateError(caso: .sinResultados)
             }
         }
+    }
+    
+    private func handleResultadoDe(canción: Canción) {
+        
     }
 }
 

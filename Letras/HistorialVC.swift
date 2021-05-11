@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  HistorialVC.swift
 //  Letras
 //
 //  Created by Alejandro Agudelo on 17/04/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class HistorialVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
