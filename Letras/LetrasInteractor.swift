@@ -13,4 +13,18 @@ protocol LetrasInteractor {
     func buscarLetra(de artista: String, llamada: String, completion: @escaping (ResultadoPeticion<Canción>) -> Void) -> Void
 }
 
-
+class LetrasInteractorImpl: LetrasInteractor {
+    
+    struct Dependencias {
+        let manejadorRed: ManejadorRed = ManejadorRedImpl()
+    }
+    let dependencias: Dependencias = .init()
+    
+    func hayInternet() -> Bool {
+        return dependencias.manejadorRed.hayConexión()
+    }
+    
+    func buscarLetra(de artista: String, llamada: String, completion: @escaping (ResultadoPeticion<Canción>) -> Void) {
+        
+    }
+}
