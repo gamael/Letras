@@ -18,6 +18,8 @@
 		609F2D8F262BD29300B5792C /* Entidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D8E262BD29300B5792C /* Entidades.swift */; };
 		609F2D91262BD30500B5792C /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D90262BD30500B5792C /* Extensiones.swift */; };
 		609F2D93262BD4A500B5792C /* LetraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F2D92262BD4A500B5792C /* LetraVC.swift */; };
+		60DF76D32649125B0088AAF8 /* ManejoRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF76D22649125B0088AAF8 /* ManejoRed.swift */; };
+		60DF76D6264914C30088AAF8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DF76D5264914C30088AAF8 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		609F2D8E262BD29300B5792C /* Entidades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entidades.swift; sourceTree = "<group>"; };
 		609F2D90262BD30500B5792C /* Extensiones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
 		609F2D92262BD4A500B5792C /* LetraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetraVC.swift; sourceTree = "<group>"; };
+		60DF76D22649125B0088AAF8 /* ManejoRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManejoRed.swift; sourceTree = "<group>"; };
+		60DF76D5264914C30088AAF8 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				609F2D8E262BD29300B5792C /* Entidades.swift */,
 				609F2D90262BD30500B5792C /* Extensiones.swift */,
 				609F2D92262BD4A500B5792C /* LetraVC.swift */,
+				60DF76D22649125B0088AAF8 /* ManejoRed.swift */,
+				60DF76D5264914C30088AAF8 /* Reachability.swift */,
 			);
 			path = Letras;
 			sourceTree = "<group>";
@@ -154,12 +160,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				609F2D7D262BC55E00B5792C /* HistorialVC.swift in Sources */,
+				60DF76D32649125B0088AAF8 /* ManejoRed.swift in Sources */,
 				609F2D93262BD4A500B5792C /* LetraVC.swift in Sources */,
 				609F2D7B262BC55E00B5792C /* BusquedaVC.swift in Sources */,
 				609F2D77262BC55E00B5792C /* AppDelegate.swift in Sources */,
 				609F2D8F262BD29300B5792C /* Entidades.swift in Sources */,
 				609F2D79262BC55E00B5792C /* SceneDelegate.swift in Sources */,
 				609F2D91262BD30500B5792C /* Extensiones.swift in Sources */,
+				60DF76D6264914C30088AAF8 /* Reachability.swift in Sources */,
 				609F2D8D262BD24800B5792C /* LetrasInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
