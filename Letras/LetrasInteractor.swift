@@ -11,12 +11,14 @@ import Foundation
 protocol LetrasInteractor {
     func hayInternet() -> Bool
     func buscarLetra(canc: canciónBuscada, completion: @escaping (ResultadoPeticion<Letra>) -> Void) -> Void
+    func guardar(canción can: Canción) -> Void
 }
 
 class LetrasInteractorImpl: LetrasInteractor {
     
     struct Dependencias {
         let manejadorRed: ManejadorRed = ManejadorRedImpl()
+        let gestorPersistencia: GestorPersistencia = GestorPersistenciaImpl()
         let networkManager = NetworkManager.shared
     }
     let dependencias: Dependencias = .init()
@@ -29,6 +31,12 @@ class LetrasInteractorImpl: LetrasInteractor {
         let petición = LyricsRequest(params: [canc.artista, canc.nombre])
         dependencias.networkManager.call(request: petición) { (resPet) in
             completion(resPet)
+        }
+    }
+    
+    func guardar(canción can: Canción) {
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+            self?.dependencias.gestorPersistencia.guardarCancion(can)
         }
     }
 }

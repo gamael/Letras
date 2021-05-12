@@ -75,8 +75,13 @@ class BusquedaVC: UIViewController {
             let artista = self.artistaTextField.text!
             let nombreCanción = self.cancionTextField.text!
             let canción = Canción(artista: artista, nombre: nombreCanción, letra: letra)
-            self.performSegue(withIdentifier: Constantes.letraSegue, sender: canción)
+            self.interactor.guardar(canción: canción)
+            self.ejecutarSegue(Constantes.letraSegue, con: canción)
         }
+    }
+    
+    private func ejecutarSegue(_ segueID: String, con parametros: Any?) {
+        performSegue(withIdentifier: segueID, sender: parametros)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
