@@ -25,4 +25,7 @@ class LetraVC: UIViewController {
         artistaCanciónLabel.text = canción?.artista
         letraCanciónTextView.text = canción?.letra.lyrics
     }
+    @IBAction func atras(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
