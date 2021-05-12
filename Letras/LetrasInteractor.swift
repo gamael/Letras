@@ -12,6 +12,7 @@ protocol LetrasInteractor {
     func hayInternet() -> Bool
     func buscarLetra(canc: canciónBuscada, completion: @escaping (ResultadoPeticion<Letra>) -> Void) -> Void
     func guardar(canción can: Canción) -> Void
+    func getUltimaBusqueda() -> Canción?
 }
 
 class LetrasInteractorImpl: LetrasInteractor {
@@ -39,4 +40,9 @@ class LetrasInteractorImpl: LetrasInteractor {
             self?.dependencias.gestorPersistencia.guardarCancion(can)
         }
     }
+    
+    func getUltimaBusqueda() -> Canción? {
+        return dependencias.gestorPersistencia.getUltimaBusqueda()
+    }
+    
 }

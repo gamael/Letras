@@ -23,7 +23,18 @@ class BusquedaVC: UIViewController {
     @IBOutlet weak var artistaTextField: UITextField!
     @IBOutlet weak var cancionTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var cancionUltimaBusquedaLabel: UILabel!
+    @IBOutlet weak var artistaUltimaBusquedaLabel: UILabel!
+    @IBOutlet weak var ultimaBusquedaStackView: UIStackView!
     var interactor: LetrasInteractor!
+    
+    var ultimaCancion: Canción? {
+        didSet {
+            if ultimaCancion != nil {
+                actualizarUltimaBusquedaCon(cancion: ultimaCancion!)
+            }
+        }
+    }
     
     struct Constantes {
         static let letraSegue = "mostrarLetraSegue"
@@ -32,6 +43,11 @@ class BusquedaVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor = LetrasInteractorImpl()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        shouldMostrarUltimaBusqueda()
     }
 
     @IBAction func buscarCanción() {
@@ -45,6 +61,29 @@ class BusquedaVC: UIViewController {
         }
         updateError(caso: .ninguno)
         ejecutarBusqueda(canc: (nombre: cancion, artista: artista))
+    }
+    
+    @IBAction func didTapUltimaBusqueda(_ sender: UITapGestureRecognizer) {
+        ejecutarSegue(Constantes.letraSegue, con: ultimaCancion)
+    }
+    private func shouldMostrarUltimaBusqueda() {
+        guard let cancion = interactor.getUltimaBusqueda() else {
+            shouldMostrarUltimaBusqueda(false)
+            return
+        }
+        ultimaCancion = cancion
+    }
+    
+    private func actualizarUltimaBusquedaCon(cancion: Canción) {
+        DispatchQueue.main.async {
+            self.cancionUltimaBusquedaLabel.text = cancion.nombre
+            self.artistaUltimaBusquedaLabel.text = cancion.artista
+            self.shouldMostrarUltimaBusqueda(true)
+        }
+    }
+    
+    private func shouldMostrarUltimaBusqueda(_ mostrar: Bool) {
+        ultimaBusquedaStackView.isHidden = !mostrar
     }
     
     private func updateError(caso: CasosError) {
