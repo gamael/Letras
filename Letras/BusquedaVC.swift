@@ -71,13 +71,12 @@ class BusquedaVC: UIViewController {
     }
     
     private func handleResultadoDe(_ letra: Letra) {
-        let artista = artistaTextField.text!
-        let nombreCanción = cancionTextField.text!
-        let canción = Canción(artista: artista, nombre: nombreCanción, letra: letra)
         DispatchQueue.main.async {
+            let artista = self.artistaTextField.text!
+            let nombreCanción = self.cancionTextField.text!
+            let canción = Canción(artista: artista, nombre: nombreCanción, letra: letra)
             self.performSegue(withIdentifier: Constantes.letraSegue, sender: canción)
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
