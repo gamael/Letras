@@ -177,6 +177,7 @@
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="8rJ-Kc-sve" id="3Ye-3c-38z"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="NjU-fd-dP5"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -192,6 +193,7 @@
                     <tabBarItem key="tabBarItem" title="Historial" image="line.horizontal.3.decrease" catalog="system" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="tableView" destination="2Jy-cn-Qa2" id="Wwe-hf-AHN"/>
+                        <segue destination="PhK-IC-GFP" kind="show" identifier="mostrarLetraSegue" id="2Vv-bd-pNU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -217,6 +219,9 @@
             <point key="canvasLocation" x="-210" y="23"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Vv-bd-pNU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
