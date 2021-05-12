@@ -10,23 +10,19 @@ import UIKit
 
 class LetraVC: UIViewController {
     
+    @IBOutlet weak var tituloCanciónLabel: UILabel!
+    @IBOutlet weak var artistaCanciónLabel: UILabel!
+    @IBOutlet weak var letraCanciónTextView: UITextView!
     var canción: Canción?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupIU()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupIU() {
+        tituloCanciónLabel.text = canción?.nombre
+        artistaCanciónLabel.text = canción?.artista
+        letraCanciónTextView.text = canción?.letra.lyrics
     }
-    */
-
 }
