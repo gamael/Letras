@@ -9,6 +9,8 @@
 import UIKit
 
 class LetraVC: UIViewController {
+    
+    var canción: Canción?
 
     override func viewDidLoad() {
         super.viewDidLoad()
