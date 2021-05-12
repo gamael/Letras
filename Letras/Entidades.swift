@@ -17,6 +17,18 @@ struct Canción: Codable {
     let artista: String
     let nombre: String
     let letra: Letra
+    
+    init(cancion: CDCancion) {
+        self.artista = cancion.artista!
+        self.nombre = cancion.nombre!
+        self.letra = Letra(lyrics: cancion.letra!) 
+    }
+    
+    init(artista: String, nombre: String, letra: Letra) {
+        self.artista = artista
+        self.nombre = nombre
+        self.letra = letra
+    }
 }
 
 struct Letra: Codable {

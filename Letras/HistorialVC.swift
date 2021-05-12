@@ -30,6 +30,11 @@ class HistorialVC: UIViewController {
         return fetchedResultsController
     }()
     
+    struct Constantes {
+        static let segueId = "mostrarLetraSegue"
+        static let cellreuseidentifier = "cancionCell"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
@@ -39,6 +44,24 @@ class HistorialVC: UIViewController {
             print("No se pudo obtener datos")
             print("\(fetchError), \(fetchError.localizedDescription)")
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constantes.segueId {
+            guard let cdcancion = sender as? CDCancion, let vc = segue.destination as? LetraVC else {
+                print("Errores al convertir")
+                return
+            }
+            vc.canción = Canción(cancion: cdcancion)
+        }
+    }
+}
+
+extension HistorialVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let cdcancion = fetchedResultsController.object(at: indexPath)
+        performSegue(withIdentifier: Constantes.segueId, sender: cdcancion)
     }
 }
 
@@ -53,7 +76,7 @@ extension HistorialVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cancionCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constantes.cellreuseidentifier, for: indexPath)
         
         configureCell(cell, at: indexPath)
 
