@@ -10,13 +10,14 @@ import Foundation
 
 protocol LetrasInteractor {
     func hayInternet() -> Bool
-    func buscarLetra(de artista: String, llamada: String, completion: @escaping (ResultadoPeticion<Canción>) -> Void) -> Void
+    func buscarLetra(canc: canciónBuscada, completion: @escaping (ResultadoPeticion<Letra>) -> Void) -> Void
 }
 
 class LetrasInteractorImpl: LetrasInteractor {
     
     struct Dependencias {
         let manejadorRed: ManejadorRed = ManejadorRedImpl()
+        let networkManager = NetworkManager.shared
     }
     let dependencias: Dependencias = .init()
     
@@ -24,7 +25,10 @@ class LetrasInteractorImpl: LetrasInteractor {
         return dependencias.manejadorRed.hayConexión()
     }
     
-    func buscarLetra(de artista: String, llamada: String, completion: @escaping (ResultadoPeticion<Canción>) -> Void) {
-        
+    func buscarLetra(canc: canciónBuscada, completion: @escaping (ResultadoPeticion<Letra>) -> Void) {
+        let petición = LyricsRequest(params: [canc.artista, canc.nombre])
+        dependencias.networkManager.call(request: petición) { (resPet) in
+            completion(resPet)
+        }
     }
 }

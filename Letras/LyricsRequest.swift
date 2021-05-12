@@ -11,7 +11,7 @@ import Foundation
 fileprivate let version = "v1"
 
 struct LyricsRequest: Request {
-    typealias Response = [String: String]
+    typealias Response = Letra
     struct Body: Codable {}
     
     let endpoint: String = "\(ConstantesGlobales.apiURL)/\(version)/%@/%@"

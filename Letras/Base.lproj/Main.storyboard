@@ -65,6 +65,7 @@
                         <outlet property="artistaTextField" destination="4LU-ep-vOI" id="zPE-4h-Bcz"/>
                         <outlet property="cancionTextField" destination="Uhg-w6-NGp" id="ArK-Mo-Wfq"/>
                         <outlet property="errorLabel" destination="e2D-x2-iMM" id="7yg-cE-RKz"/>
+                        <segue destination="PhK-IC-GFP" kind="show" identifier="mostrarLetraSegue" id="lNT-08-rCV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -76,7 +77,7 @@
             <objects>
                 <viewController id="PhK-IC-GFP" customClass="LetraVC" customModule="Letras" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mop-1t-DUf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xqG-yF-EgF">
@@ -113,6 +114,7 @@
                             <constraint firstItem="xqG-yF-EgF" firstAttribute="top" secondItem="2U7-fs-PzN" secondAttribute="top" constant="20" id="woR-vZ-pwj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Sa8-Lr-fzU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcJ-bF-5jp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
